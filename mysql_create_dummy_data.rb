@@ -21,7 +21,7 @@ $KCODE = 'UTF8'
 class CreateDummyData
   DEBUG = false
   include SequelDatabase, DummyTables
-  VERSION = '0.2.9'
+  VERSION = '0.2.10'
   DEFAULT_MULTI_INSERT = 1250 # 1コミットで反映する行数
   DEFAULT_CHECK_POINT= 50000 # insertの状況をログ出力する行数(テーブルごと)
   DEFAULT_POOL_SIZE = 6 # threach の並列実行数
