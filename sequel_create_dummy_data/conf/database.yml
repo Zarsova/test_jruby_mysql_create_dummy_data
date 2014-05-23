@@ -1,0 +1,33 @@
+# configuration.yml->base_profile が development の場合
+
+development:
+  :adapter: jdbc
+  :database: mysql
+  :default_schema: target
+  :host: 127.0.0.1
+  :port: 3306
+  :logger_dir: log
+  :log_level: Logger::WARN
+  :options:
+    :encoding: utf-8
+    :user: target
+    :password: target
+    :max_connections: 30
+    :pool_sleep_time: 0.001
+    :pool_timeout: 300
+
+reference:
+  :adapter: jdbc
+  :database: mysql
+  :default_schema: sakila
+  :host: 127.0.0.1
+  :port: 3306
+  :logger_dir: log
+  :log_level: Logger::WARN
+  :options:
+    :encoding: utf-8
+    :user: sakila
+    :password: sakila
+    :max_connections: 30
+    :pool_sleep_time: 0.001
+    :pool_timeout: 300

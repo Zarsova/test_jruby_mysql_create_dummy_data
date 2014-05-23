@@ -1,0 +1,139 @@
+tables:
+  - name: actor
+    count: 0
+    from: 1
+    columns:
+      # - {name: actor_id                       , value: NaN}                             ## primary_keys and auto_increment
+      - {name: first_name                       , value: [PENELOPE, NICK, ED, JENNIFER, JOHNNY, BETTE, GRACE, MATTHEW, JOE, CHRISTIAN]}
+      - {name: last_name                        , value: [AKROYD, ALLEN, ASTAIRE, BACALL, BAILEY, BALE, BALL, BARRYMORE, BASINGER, BENING]}
+  - name: address
+    count: 0
+    from: 1
+    columns:
+      # - {name: address_id                     , value: NaN}                             ## primary_keys and auto_increment
+      - {name: address                          , value: [47 MySakila Drive, 28 MySQL Boulevard, 23 Workhaven Lane, 1411 Lillydale Drive, 1913 Hanoi Way, 1121 Loja Avenue, 692 Joliet Street, 1566 Inegl Manor, 53 Idfu Parkway, 1795 Santiago de Compostela Way]}
+      - {name: address2                         , value: blank_char}
+      - {name: district                         , value: [Alberta, QLD, Nagasaki, California, Attika, Mandalay, Nantou, Texas, Central Serbia, Hamilton]}
+      - {name: city_id                          , value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      - {name: postal_code                      , value: ['35200', '17886', '83579', '53561', '42399', '18743', '93896', '77948', '45844', '53628']}
+      - {name: phone                            , value: ['14033335568', '6172235589', '28303384290', '838635286649', '448477190408', '705814003527', '10655648674', '860452626434', '716571220373', '657282285970']}
+      - {name: last_update                      , value: [2006-02-15 04:45:30.000000000 +09:00]}
+  - name: category
+    count: 0
+    from: 1
+    columns:
+      # - {name: category_id                    , value: NaN}                             ## primary_keys and auto_increment
+      - {name: name                             , value: [Action, Animation, Children, Classics, Comedy, Documentary, Drama, Family, Foreign, Games]}
+  - name: city
+    count: 0
+    from: 1
+    columns:
+      # - {name: city_id                        , value: NaN}                             ## primary_keys and auto_increment
+      - {name: city                             , value: [A Corua (La Corua), Abha, Abu Dhabi, Acua, Adana, Addis Abeba, Aden, Adoni, Ahmadnagar, Akishima]}
+      - {name: country_id                       , value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+  - name: country
+    count: 0
+    from: 1
+    columns:
+      # - {name: country_id                     , value: NaN}                             ## primary_keys and auto_increment
+      - {name: country                          , value: [Afghanistan, Algeria, American Samoa, Angola, Anguilla, Argentina, Armenia, Australia, Austria, Azerbaijan]}
+  - name: customer
+    count: 0
+    from: 1
+    columns:
+      # - {name: customer_id                    , value: NaN}                             ## primary_keys and auto_increment
+      - {name: store_id                         , value: [1, 2]}
+      - {name: first_name                       , value: [MARY, PATRICIA, LINDA, BARBARA, ELIZABETH, JENNIFER, MARIA, SUSAN, MARGARET, DOROTHY]}
+      - {name: last_name                        , value: [ABNEY, ADAM, ADAMS, ALEXANDER, ALLARD, ALLEN, ALVAREZ, ANDERSON, ANDREW, ANDREWS]}
+      - {name: email                            , value: [MARY.SMITH@sakilacustomer.org, PATRICIA.JOHNSON@sakilacustomer.org, LINDA.WILLIAMS@sakilacustomer.org, BARBARA.JONES@sakilacustomer.org, ELIZABETH.BROWN@sakilacustomer.org, JENNIFER.DAVIS@sakilacustomer.org, MARIA.MILLER@sakilacustomer.org, SUSAN.WILSON@sakilacustomer.org, MARGARET.MOORE@sakilacustomer.org, DOROTHY.TAYLOR@sakilacustomer.org]}
+      - {name: address_id                       , value: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}
+      - {name: active                           , value: [1, 0]}
+      - {name: create_date                      , value: [2006-02-14 22:04:36.000000000 +09:00, 2006-02-14 22:04:37.000000000 +09:00]}
+  - name: film
+    count: 0
+    from: 1
+    columns:
+      # - {name: film_id                        , value: NaN}                             ## primary_keys and auto_increment
+      - {name: title                            , value: [ACADEMY DINOSAUR, ACE GOLDFINGER, ADAPTATION HOLES, AFFAIR PREJUDICE, AFRICAN EGG, AGENT TRUMAN, AIRPLANE SIERRA, AIRPORT POLLOCK, ALABAMA DEVIL, ALADDIN CALENDAR]}
+      - {name: description                      , value: [A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies, A Astounding Epistle of a Database Administrator And a Explorer who must Find a Car in Ancient China, A Astounding Reflection of a Lumberjack And a Car who must Sink a Lumberjack in A Baloon Factory, A Fanciful Documentary of a Frisbee And a Lumberjack who must Chase a Monkey in A Shark Tank, A Fast-Paced Documentary of a Pastry Chef And a Dentist who must Pursue a Forensic Psychologist in The Gulf of Mexico, A Intrepid Panorama of a Robot And a Boy who must Escape a Sumo Wrestler in Ancient China, A Touching Saga of a Hunter And a Butler who must Discover a Butler in A Jet Boat, A Epic Tale of a Moose And a Girl who must Confront a Monkey in Ancient India, A Thoughtful Panorama of a Database Administrator And a Mad Scientist who must Outgun a Mad Scientist in A Jet Boat, A Action-Packed Tale of a Man And a Lumberjack who must Reach a Feminist in Ancient China]}
+      - {name: release_year                     , value: [2006-01-01]}
+      - {name: language_id                      , value: [1]}
+      - {name: original_language_id             , value: blank_char}
+      - {name: rental_duration                  , value: [6, 3, 7, 5, 4]}
+      - {name: rental_rate                      , value: [0.99, 4.99, 2.99]}
+      - {name: length                           , value: [86, 48, 50, 117, 130, 169, 62, 54, 114, 63]}
+      - {name: replacement_cost                 , value: [20.99, 12.99, 18.99, 26.99, 22.99, 17.99, 28.99, 15.99, 21.99, 24.99]}
+      - {name: rating                           , value: [PG, G, NC-17, PG-13, R]}
+      - {name: special_features                 , value: [Deleted Scenes,Behind the Scenes, Trailers,Deleted Scenes, Commentaries,Behind the Scenes, Deleted Scenes, Trailers, Commentaries,Deleted Scenes, Trailers,Deleted Scenes,Behind the Scenes, Trailers,Commentaries,Behind the Scenes, Trailers,Commentaries, Trailers,Behind the Scenes]}
+  - name: film_actor
+    count: 0
+    from: 1
+    columns:
+      # - {name: actor_id                       , value: NaN}                             ## primary_keys
+      # - {name: film_id                        , value: NaN}                             ## primary_keys
+  - name: film_category
+    count: 0
+    from: 1
+    columns:
+      # - {name: film_id                        , value: NaN}                             ## primary_keys
+      # - {name: category_id                    , value: NaN}                             ## primary_keys
+  - name: film_text
+    count: 0
+    from: 1
+    columns:
+      # - {name: film_id                        , value: NaN}                             ## primary_keys
+      - {name: title                            , value: [ACADEMY DINOSAUR, ACE GOLDFINGER, ADAPTATION HOLES, AFFAIR PREJUDICE, AFRICAN EGG, AGENT TRUMAN, AIRPLANE SIERRA, AIRPORT POLLOCK, ALABAMA DEVIL, ALADDIN CALENDAR]}
+  - name: inventory
+    count: 0
+    from: 1
+    columns:
+      # - {name: inventory_id                   , value: NaN}                             ## primary_keys and auto_increment
+      - {name: film_id                          , value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      - {name: store_id                         , value: [1, 2]}
+  - name: language
+    count: 0
+    from: 1
+    columns:
+      # - {name: language_id                    , value: NaN}                             ## primary_keys and auto_increment
+      - {name: name                             , value: [English, Italian, Japanese, Mandarin, French, German]}
+  - name: payment
+    count: 0
+    from: 1
+    columns:
+      # - {name: payment_id                     , value: NaN}                             ## primary_keys and auto_increment
+      - {name: customer_id                      , value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      - {name: staff_id                         , value: [1, 2]}
+      - {name: rental_id                        , value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      - {name: amount                           , value: [2.99, 0.99, 5.99, 9.99, 4.99, 3.99, 7.99, 1.99, 6.99, 10.99]}
+      - {name: payment_date                     , value: [2005-05-25 11:30:37.000000000 +09:00, 2005-05-28 10:35:23.000000000 +09:00, 2005-06-15 00:54:12.000000000 +09:00, 2005-06-15 18:02:53.000000000 +09:00, 2005-06-15 21:08:46.000000000 +09:00, 2005-06-16 15:18:57.000000000 +09:00, 2005-06-18 08:41:48.000000000 +09:00, 2005-06-18 13:33:59.000000000 +09:00, 2005-06-21 06:24:45.000000000 +09:00, 2005-07-08 03:17:05.000000000 +09:00]}
+  - name: rental
+    count: 0
+    from: 1
+    columns:
+      # - {name: rental_id                      , value: NaN}                             ## primary_keys and auto_increment
+      - {name: rental_date                      , value: [2005-05-24 22:53:30.000000000 +09:00, 2005-05-24 22:54:33.000000000 +09:00, 2005-05-24 23:03:39.000000000 +09:00, 2005-05-24 23:04:41.000000000 +09:00, 2005-05-24 23:05:21.000000000 +09:00, 2005-05-24 23:08:07.000000000 +09:00, 2005-05-24 23:11:53.000000000 +09:00, 2005-05-24 23:31:46.000000000 +09:00, 2005-05-25 00:00:40.000000000 +09:00, 2005-05-25 00:02:21.000000000 +09:00]}
+      - {name: inventory_id                     , value: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]}
+      - {name: customer_id                      , value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      - {name: return_date                      , value: [2005-05-26 22:04:30.000000000 +09:00, 2005-05-28 19:40:33.000000000 +09:00, 2005-06-01 22:12:39.000000000 +09:00, 2005-06-03 01:43:41.000000000 +09:00, 2005-06-02 04:33:21.000000000 +09:00, 2005-05-27 01:32:07.000000000 +09:00, 2005-05-29 20:34:53.000000000 +09:00, 2005-05-27 23:33:46.000000000 +09:00, 2005-05-28 00:22:40.000000000 +09:00, 2005-05-31 22:44:21.000000000 +09:00]}
+      - {name: staff_id                         , value: [1, 2]}
+  - name: staff
+    count: 0
+    from: 1
+    columns:
+      # - {name: staff_id                       , value: NaN}                             ## primary_keys and auto_increment
+      - {name: first_name                       , value: [Mike, Jon]}
+      - {name: last_name                        , value: [Hillyer, Stephens]}
+      - {name: address_id                       , value: [3, 4]}
+      - {name: picture                          , value: [!ruby/string:Sequel::SQL::Blob |-]}
+      - {name: email                            , value: [Mike.Hillyer@sakilastaff.com, Jon.Stephens@sakilastaff.com]}
+      - {name: store_id                         , value: [1, 2]}
+      - {name: active                           , value: [1]}
+      - {name: username                         , value: [Mike, Jon]}
+      - {name: password                         , value: [8cb2237d0679ca88db6464eac60da96345513964]}
+  - name: store
+    count: 0
+    from: 1
+    columns:
+      # - {name: store_id                       , value: NaN}                             ## primary_keys and auto_increment
+      - {name: manager_staff_id                 , value: [1, 2]}
+      - {name: address_id                       , value: [1, 2]}
