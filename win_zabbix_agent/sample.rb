@@ -11,8 +11,7 @@ WinZabbixAgent::ZabbixSender.send do
   multi_send 'key2', 2
   multi_send 'key3', 3
 end
-
-
+\
 WinZabbixAgent::ZabbixSender.send do
   strict true
   multi_send 'key1', 1

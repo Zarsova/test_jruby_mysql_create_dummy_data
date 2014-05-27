@@ -20,11 +20,11 @@ module WinZabbixAgent
     #logger:: ロガー
     #conf:: Zabbix Agent Conf ファイルパス
     #sender:: Zabbix Sender ファイルパス
-    def initialize(logger = nil, conf = DEFAULT_ZBX_AGENT_CONF, sender = DEFAULT_ZBX_SENDER)
+    def initialize(logger = nil, conf = nil, sender = nil)
       @logger = logger || Logger.new(STDERR)
-      @sender = sender
-      @conf = conf
-      load_conf(conf)
+      @sender = sender || DEFAULT_ZBX_SENDER
+      @conf = conf || DEFAULT_ZBX_AGENT_CONF
+      load_conf(@conf)
     end
 
     #zabbix_sender の -i オプションを利用した一括送信を行う
@@ -38,13 +38,13 @@ module WinZabbixAgent
     #   multi_send userkey3, value3
     # end
     #
-    def self.send(logger = nil, conf = DEFAULT_ZBX_AGENT_CONF, sender = DEFAULT_ZBX_SENDER, &blk)
+    def self.send(logger = nil, conf = nil, sender = nil, &blk)
       s = new logger, conf, sender
       s.to &blk
     end
 
     def to(&blk)
-      raise AugumentError, 'need block' unless block_given?
+      raise ArgumentError, 'need block' unless block_given?
       tmp_file = Tempfile.open(['tmp_zabbix_sender', '.txt'])
       begin
         @multi_send_value = {}
@@ -153,5 +153,6 @@ module WinZabbixAgent
         }
       }
     end
+    attr_reader :multi_send_value
   end
 end
