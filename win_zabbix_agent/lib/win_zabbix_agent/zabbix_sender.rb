@@ -153,6 +153,5 @@ module WinZabbixAgent
         }
       }
     end
-    attr_reader :multi_send_value
   end
 end
