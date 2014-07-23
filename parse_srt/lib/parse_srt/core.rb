@@ -7,6 +7,10 @@ module ParseSrt
       @inits ||= []
     end
 
+    def commands
+      @commands ||= []
+    end
+
     def init(&block)
       inits << block
     end
@@ -21,9 +25,22 @@ module ParseSrt
       end
     end
 
+    def command(pattern, options = {}, &block)
+      if block
+        command_name = ":#{pattern}"
+        if block.arity > 0
+          pattern = %r|^#{command_name}\s+(.*)$|
+        else
+          pattern = %r|^#{command_name}$|
+        end
+        commands << {:pattern => pattern, :block => block}
+      else
+        commands.detect { |c| c[:pattern] =~ pattern }
+      end
+    end
+
     def input(text)
       system("cls")
-      puts command(text)
       if command = command(text)
         command[:block].call()
       end
@@ -31,6 +48,8 @@ module ParseSrt
 
     def start(options = {})
       _start = Time.now
+      inits.each { |block| class_eval(&block) }
+      inits.clear
       begin
         EM.run do
           Readline.basic_word_break_characters = " \t\n\"\\'`$><=;|&{(@"
@@ -49,6 +68,7 @@ module ParseSrt
 
     def stop
       EventMachine.stop_event_loop
+      exit 0
     end
   end
   extend Core
