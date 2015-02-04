@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Python(全部入り)
+Python
  - WinPython2.7 http://sourceforge.net/projects/winpython/files/WinPython_2.7/2.7.6.3/
 参考資料
  - http://pandas.pydata.org/pandas-docs/stable/10min.html
